@@ -6,5 +6,6 @@ target 'GoldenRabbitLand' do
   use_frameworks!
 
   # Pods for GoldenRabbitLand
+  pod 'R.swift'
 
 end
