@@ -7,5 +7,5 @@ target 'GoldenRabbitLand' do
 
   # Pods for GoldenRabbitLand
   pod 'R.swift'
-
+  pod 'lottie-ios'
 end
