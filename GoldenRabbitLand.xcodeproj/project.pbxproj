@@ -13,9 +13,11 @@
 		101AB1B1292F35970042EF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1AF292F35970042EF9B /* Main.storyboard */; };
 		101AB1B3292F35980042EF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B2292F35980042EF9B /* Assets.xcassets */; };
 		101AB1B6292F35980042EF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */; };
+		6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCC85DA905F1EBFE6C55EC6 /* Pods-GoldenRabbitLand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenRabbitLand.debug.xcconfig"; path = "Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand.debug.xcconfig"; sourceTree = "<group>"; };
 		101AB1A6292F35970042EF9B /* GoldenRabbitLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenRabbitLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101AB1A9292F35970042EF9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101AB1AB292F35970042EF9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		101AB1B2292F35980042EF9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101AB1B5292F35980042EF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101AB1B7292F35980042EF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenRabbitLand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenRabbitLand.release.xcconfig"; path = "Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CFA170420F2F4C18F25877 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		101AB19D292F35970042EF9B = {
 			isa = PBXGroup;
 			children = (
 				101AB1A8292F35970042EF9B /* GoldenRabbitLand */,
 				101AB1A7292F35970042EF9B /* Products */,
+				5243E26A5E9DFC86AA99A61E /* Pods */,
+				04CFA170420F2F4C18F25877 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = GoldenRabbitLand;
 			sourceTree = "<group>";
 		};
+		5243E26A5E9DFC86AA99A61E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CCC85DA905F1EBFE6C55EC6 /* Pods-GoldenRabbitLand.debug.xcconfig */,
+				E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101AB1BA292F35980042EF9B /* Build configuration list for PBXNativeTarget "GoldenRabbitLand" */;
 			buildPhases = (
+				C67B1827419A10B411946E1B /* [CP] Check Pods Manifest.lock */,
 				101AB1A2292F35970042EF9B /* Sources */,
 				101AB1A3292F35970042EF9B /* Frameworks */,
 				101AB1A4292F35970042EF9B /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C67B1827419A10B411946E1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldenRabbitLand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		101AB1A2292F35970042EF9B /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		101AB1BB292F35980042EF9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCC85DA905F1EBFE6C55EC6 /* Pods-GoldenRabbitLand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +362,7 @@
 		};
 		101AB1BC292F35980042EF9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
