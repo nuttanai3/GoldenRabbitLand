@@ -14,6 +14,9 @@
 		101AB1B3292F35980042EF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B2292F35980042EF9B /* Assets.xcassets */; };
 		101AB1B6292F35980042EF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */; };
 		107E2FF5292F3B160068F9D6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2FF4292F3B160068F9D6 /* R.generated.swift */; };
+		107E2FFD292F3F510068F9D6 /* MainBackGround.json in Resources */ = {isa = PBXBuildFile; fileRef = 107E2FFC292F3F510068F9D6 /* MainBackGround.json */; };
+		107E3000292F3FC20068F9D6 /* MainBackGround.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107E2FFE292F3FC20068F9D6 /* MainBackGround.xib */; };
+		107E3001292F3FC20068F9D6 /* MainBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2FFF292F3FC20068F9D6 /* MainBackGroundView.swift */; };
 		6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		101AB1B5292F35980042EF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101AB1B7292F35980042EF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		107E2FF4292F3B160068F9D6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		107E2FFC292F3F510068F9D6 /* MainBackGround.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainBackGround.json; sourceTree = "<group>"; };
+		107E2FFE292F3FC20068F9D6 /* MainBackGround.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainBackGround.xib; sourceTree = "<group>"; };
+		107E2FFF292F3FC20068F9D6 /* MainBackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainBackGroundView.swift; sourceTree = "<group>"; };
 		BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenRabbitLand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenRabbitLand.release.xcconfig"; path = "Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,15 +80,66 @@
 		101AB1A8292F35970042EF9B /* GoldenRabbitLand */ = {
 			isa = PBXGroup;
 			children = (
-				101AB1A9292F35970042EF9B /* AppDelegate.swift */,
-				101AB1AB292F35970042EF9B /* SceneDelegate.swift */,
-				101AB1AD292F35970042EF9B /* ViewController.swift */,
-				101AB1AF292F35970042EF9B /* Main.storyboard */,
-				101AB1B2292F35980042EF9B /* Assets.xcassets */,
-				101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */,
 				101AB1B7292F35980042EF9B /* Info.plist */,
+				107E2FF9292F3EF20068F9D6 /* Resourse */,
+				107E2FF7292F3EBD0068F9D6 /* Feature */,
 			);
 			path = GoldenRabbitLand;
+			sourceTree = "<group>";
+		};
+		107E2FF6292F3E760068F9D6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				107E2FFE292F3FC20068F9D6 /* MainBackGround.xib */,
+				107E2FFF292F3FC20068F9D6 /* MainBackGroundView.swift */,
+				101AB1AD292F35970042EF9B /* ViewController.swift */,
+				101AB1AF292F35970042EF9B /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		107E2FF7292F3EBD0068F9D6 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				107E2FF8292F3ED00068F9D6 /* Starter */,
+				107E2FF6292F3E760068F9D6 /* Main */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		107E2FF8292F3ED00068F9D6 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				101AB1A9292F35970042EF9B /* AppDelegate.swift */,
+				101AB1AB292F35970042EF9B /* SceneDelegate.swift */,
+				101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		107E2FF9292F3EF20068F9D6 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				107E2FFB292F3F510068F9D6 /* Animation */,
+				107E2FFA292F3F0C0068F9D6 /* Starter */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		107E2FFA292F3F0C0068F9D6 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				101AB1B2292F35980042EF9B /* Assets.xcassets */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		107E2FFB292F3F510068F9D6 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				107E2FFC292F3F510068F9D6 /* MainBackGround.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		5243E26A5E9DFC86AA99A61E /* Pods */ = {
@@ -155,7 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107E2FFD292F3F510068F9D6 /* MainBackGround.json in Resources */,
 				101AB1B6292F35980042EF9B /* LaunchScreen.storyboard in Resources */,
+				107E3000292F3FC20068F9D6 /* MainBackGround.xib in Resources */,
 				101AB1B3292F35980042EF9B /* Assets.xcassets in Resources */,
 				101AB1B1292F35970042EF9B /* Main.storyboard in Resources */,
 			);
@@ -233,6 +292,7 @@
 				101AB1AA292F35970042EF9B /* AppDelegate.swift in Sources */,
 				101AB1AC292F35970042EF9B /* SceneDelegate.swift in Sources */,
 				107E2FF5292F3B160068F9D6 /* R.generated.swift in Sources */,
+				107E3001292F3FC20068F9D6 /* MainBackGroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

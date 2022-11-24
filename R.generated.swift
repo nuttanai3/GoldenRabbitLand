@@ -139,6 +139,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.file` struct is generated, and contains static references to 1 files.
+  struct file {
+    /// Resource file `MainBackGround.json`.
+    static let mainBackGroundJson = Rswift.FileResource(bundle: R.hostingBundle, name: "MainBackGround", pathExtension: "json")
+
+    /// `bundle.url(forResource: "MainBackGround", withExtension: "json")`
+    static func mainBackGroundJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.mainBackGroundJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -170,6 +184,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `MainBackGround`.
+    static let mainBackGround = _R.nib._MainBackGround()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MainBackGround", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mainBackGround) instead")
+    static func mainBackGround(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainBackGround)
+    }
+    #endif
+
+    static func mainBackGround(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.mainBackGround.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -189,6 +223,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _MainBackGround: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainBackGround"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
