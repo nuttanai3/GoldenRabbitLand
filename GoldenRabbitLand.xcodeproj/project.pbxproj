@@ -13,6 +13,7 @@
 		101AB1B1292F35970042EF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1AF292F35970042EF9B /* Main.storyboard */; };
 		101AB1B3292F35980042EF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B2292F35980042EF9B /* Assets.xcassets */; };
 		101AB1B6292F35980042EF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */; };
+		107E2FF5292F3B160068F9D6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2FF4292F3B160068F9D6 /* R.generated.swift */; };
 		6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		101AB1B2292F35980042EF9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101AB1B5292F35980042EF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101AB1B7292F35980042EF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107E2FF4292F3B160068F9D6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenRabbitLand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenRabbitLand.release.xcconfig"; path = "Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 		101AB19D292F35970042EF9B = {
 			isa = PBXGroup;
 			children = (
+				107E2FF4292F3B160068F9D6 /* R.generated.swift */,
 				101AB1A8292F35970042EF9B /* GoldenRabbitLand */,
 				101AB1A7292F35970042EF9B /* Products */,
 				5243E26A5E9DFC86AA99A61E /* Pods */,
@@ -88,7 +91,6 @@
 				0CCC85DA905F1EBFE6C55EC6 /* Pods-GoldenRabbitLand.debug.xcconfig */,
 				E24143259BFB1B318130385F /* Pods-GoldenRabbitLand.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,9 +102,11 @@
 			buildConfigurationList = 101AB1BA292F35980042EF9B /* Build configuration list for PBXNativeTarget "GoldenRabbitLand" */;
 			buildPhases = (
 				C67B1827419A10B411946E1B /* [CP] Check Pods Manifest.lock */,
+				107E2FF3292F3AC60068F9D6 /* ShellScript */,
 				101AB1A2292F35970042EF9B /* Sources */,
 				101AB1A3292F35970042EF9B /* Frameworks */,
 				101AB1A4292F35970042EF9B /* Resources */,
+				244A190DD9722ED1A1E12F65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +164,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		107E2FF3292F3AC60068F9D6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		244A190DD9722ED1A1E12F65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenRabbitLand/Pods-GoldenRabbitLand-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C67B1827419A10B411946E1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +232,7 @@
 				101AB1AE292F35970042EF9B /* ViewController.swift in Sources */,
 				101AB1AA292F35970042EF9B /* AppDelegate.swift in Sources */,
 				101AB1AC292F35970042EF9B /* SceneDelegate.swift in Sources */,
+				107E2FF5292F3B160068F9D6 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
