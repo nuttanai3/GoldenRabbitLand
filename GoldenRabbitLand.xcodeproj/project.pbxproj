@@ -13,6 +13,7 @@
 		101AB1B1292F35970042EF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1AF292F35970042EF9B /* Main.storyboard */; };
 		101AB1B3292F35980042EF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B2292F35980042EF9B /* Assets.xcassets */; };
 		101AB1B6292F35980042EF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AB1B4292F35980042EF9B /* LaunchScreen.storyboard */; };
+		1073BB9D29A689FB001CADC3 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 1073BB9C29A689FB001CADC3 /* Algorithms */; };
 		107E2FF5292F3B160068F9D6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2FF4292F3B160068F9D6 /* R.generated.swift */; };
 		107E2FFD292F3F510068F9D6 /* MainBackGround.json in Resources */ = {isa = PBXBuildFile; fileRef = 107E2FFC292F3F510068F9D6 /* MainBackGround.json */; };
 		107E3000292F3FC20068F9D6 /* MainBackGround.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107E2FFE292F3FC20068F9D6 /* MainBackGround.xib */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1073BB9D29A689FB001CADC3 /* Algorithms in Frameworks */,
 				6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +207,9 @@
 			dependencies = (
 			);
 			name = GoldenRabbitLand;
+			packageProductDependencies = (
+				1073BB9C29A689FB001CADC3 /* Algorithms */,
+			);
 			productName = GoldenRabbitLand;
 			productReference = 101AB1A6292F35970042EF9B /* GoldenRabbitLand.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 101AB19D292F35970042EF9B;
+			packageReferences = (
+				1073BB9B29A689FB001CADC3 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 101AB1A7292F35970042EF9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -556,6 +564,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1073BB9B29A689FB001CADC3 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1073BB9C29A689FB001CADC3 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1073BB9B29A689FB001CADC3 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 101AB19E292F35970042EF9B /* Project object */;
 }
