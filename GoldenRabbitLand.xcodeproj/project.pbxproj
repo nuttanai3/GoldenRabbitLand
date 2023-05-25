@@ -27,6 +27,7 @@
 		107E3022292F44C00068F9D6 /* menuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E301A292F44C00068F9D6 /* menuListViewController.swift */; };
 		107E3023292F44C00068F9D6 /* menuListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E301B292F44C00068F9D6 /* menuListInteractor.swift */; };
 		107E3024292F44C00068F9D6 /* menuListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E301C292F44C00068F9D6 /* menuListProtocol.swift */; };
+		10FB3EF82A1F360600F64AA5 /* Instructions in Frameworks */ = {isa = PBXBuildFile; productRef = 10FB3EF72A1F360600F64AA5 /* Instructions */; };
 		6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F983693227B3586D42634 /* Pods_GoldenRabbitLand.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1073BB9D29A689FB001CADC3 /* Algorithms in Frameworks */,
+				10FB3EF82A1F360600F64AA5 /* Instructions in Frameworks */,
 				6FED2EAAE778179C03CA1C07 /* Pods_GoldenRabbitLand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +211,7 @@
 			name = GoldenRabbitLand;
 			packageProductDependencies = (
 				1073BB9C29A689FB001CADC3 /* Algorithms */,
+				10FB3EF72A1F360600F64AA5 /* Instructions */,
 			);
 			productName = GoldenRabbitLand;
 			productReference = 101AB1A6292F35970042EF9B /* GoldenRabbitLand.app */;
@@ -240,6 +243,7 @@
 			mainGroup = 101AB19D292F35970042EF9B;
 			packageReferences = (
 				1073BB9B29A689FB001CADC3 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				10FB3EF62A1F360600F64AA5 /* XCRemoteSwiftPackageReference "Instructions" */,
 			);
 			productRefGroup = 101AB1A7292F35970042EF9B /* Products */;
 			projectDirPath = "";
@@ -574,6 +578,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		10FB3EF62A1F360600F64AA5 /* XCRemoteSwiftPackageReference "Instructions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ephread/Instructions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -581,6 +593,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1073BB9B29A689FB001CADC3 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
+		};
+		10FB3EF72A1F360600F64AA5 /* Instructions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10FB3EF62A1F360600F64AA5 /* XCRemoteSwiftPackageReference "Instructions" */;
+			productName = Instructions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
