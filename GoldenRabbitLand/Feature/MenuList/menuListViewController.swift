@@ -30,6 +30,23 @@ class menuListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        var config = UIContentUnavailableConfiguration.empty()
+        config.image = UIImage(systemName: "star.fill")
+        config.imageProperties.tintColor = .white
+        config.background.backgroundColor = .gray
+        config.text = "No Favorites"
+        config.textProperties.color = .white
+        config.secondaryText =
+            "Your favorite translations will appear here."
+        config.secondaryTextProperties.color = .white
+        var retryButtonConfig = UIButton.Configuration.borderless()
+        retryButtonConfig.image = R.image.fakeTaxi()
+        config.button = retryButtonConfig
+        // Define the reload button action
+        config.buttonProperties.primaryAction = UIAction.init(handler: { _ in
+            self.dismiss(animated: true)
+        })
+        contentUnavailableConfiguration = config
         doSomething()
     }
 
@@ -64,3 +81,5 @@ extension menuListViewController {
         menuListConfiguration.shared.configure(self)
     }
 }
+
+
