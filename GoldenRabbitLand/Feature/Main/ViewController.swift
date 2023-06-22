@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     var logoImages = [UIImage]()
     var count = 0
+    let logger = Logger(subsystem: "subsystem", category: "category")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
             logoImages.append(image)
         }
         titleLabel.traitOverrides.typesettingLanguage = Locale.Language(identifier: "th")
+        logger.debug("\(self.titleLabel)")
     }
     
     override func viewDidAppear(_ animated: Bool) {

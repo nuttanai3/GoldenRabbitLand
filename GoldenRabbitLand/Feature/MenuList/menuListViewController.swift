@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OSLog
 
 class menuListViewController: UIViewController {
     var interactor: menuListBusinessLogic?
@@ -15,7 +16,7 @@ class menuListViewController: UIViewController {
     // MARK: @IBOutlet
 
     // MARK: Data
-    
+    let logger = Logger(subsystem: "subsystem23", category: "category2")
     // MARK: View lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -44,10 +45,17 @@ class menuListViewController: UIViewController {
         config.button = retryButtonConfig
         // Define the reload button action
         config.buttonProperties.primaryAction = UIAction.init(handler: { _ in
-            self.dismiss(animated: true)
+            var arr = [[String: Any]]()
+            var dict = [String: Any]()
+            dict["a"] = 0
+            dict["b"] = ""
+            arr.append(dict)
+            self.logger.info("\(arr) \(dict)")
+            self.contentUnavailableConfiguration = nil
         })
         contentUnavailableConfiguration = config
         doSomething()
+        logger.notice("\(config)")
     }
     
     override func viewIsAppearing(_ animated: Bool) {
@@ -66,6 +74,11 @@ class menuListViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
+        var arr = [structA]()
+        var ao = structA(a: "11")
+        arr.append(ao)
+        logger.log(level: .error, "\(arr)")
+        logger.trace("\(ao)")
         dismiss(animated: true)
     }
 }
@@ -87,4 +100,12 @@ extension menuListViewController {
     }
 }
 
+struct structA: CustomStringConvertible {
+    var description: String {
+        return "structA(a: \(a), b: \(b))"
+    }
+    
+    var a: String = "10"
+    var b: Int = 9
+}
 
