@@ -49,6 +49,11 @@ class menuListViewController: UIViewController {
         contentUnavailableConfiguration = config
         doSomething()
     }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        //between viewWillAppear to viewWillLayoutSubviews
+    }
 
     private func setupView() {
         // set view something

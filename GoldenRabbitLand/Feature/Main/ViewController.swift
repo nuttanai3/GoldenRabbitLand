@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var backGroundView: MainBackGroundView!
     @IBOutlet weak var logoImageView: UIImageView!
     var logoImages = [UIImage]()
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
         if let image = UIImage(named: R.image.playGround.name) {
             logoImages.append(image)
         }
+        titleLabel.traitOverrides.typesettingLanguage = Locale.Language(identifier: "th")
     }
     
     override func viewDidAppear(_ animated: Bool) {
