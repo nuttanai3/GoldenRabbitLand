@@ -109,3 +109,8 @@ struct structA: CustomStringConvertible {
     var b: Int = 9
 }
 
+#Preview("Library") {
+    let controller = menuListViewController()
+//    controller.displayCuratedContent = true
+    return controller
+}

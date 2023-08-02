@@ -56,3 +56,8 @@ class ViewController: UIViewController {
     }
 }
 
+#Preview("Library2") {
+    let controller = ViewController()
+//    controller.displayCuratedContent = true
+    return controller
+}
