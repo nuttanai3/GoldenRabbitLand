@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoldenRabbitLand" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="GoldenRabbitLand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,21 +58,47 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!! ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!! ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-64-8n5">
+                                <rect key="frame" x="50" y="124" width="734" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="userComments">
+                                    <fragment content="th"/>
+                                </attributedString>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!! ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!! ที่นี่ที่ไหนหรอจ้ะ!!! ตรงนั้น!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0FD-iR-Cah">
+                                <rect key="frame" x="50" y="944.5" width="734" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="userComments">
+                                    <fragment content="th"/>
+                                </attributedString>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7hV-64-8n5" secondAttribute="trailing" constant="50" id="LfO-Cb-UNU"/>
+                            <constraint firstItem="0FD-iR-Cah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Lqh-qF-St8"/>
                             <constraint firstItem="yJu-h1-Rl7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OcA-Qo-UE2"/>
                             <constraint firstItem="7yk-Ar-1Z2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VWd-Bs-Tlw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yJu-h1-Rl7" secondAttribute="bottom" id="bPF-ZU-cac"/>
+                            <constraint firstItem="7hV-64-8n5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bvF-W0-5uY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJu-h1-Rl7" secondAttribute="trailing" id="dde-RZ-ILg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0FD-iR-Cah" secondAttribute="trailing" constant="50" id="ehU-h2-e5f"/>
+                            <constraint firstItem="7hV-64-8n5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="k8L-Oz-xBE"/>
                             <constraint firstItem="yJu-h1-Rl7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lon-pU-xQI"/>
                             <constraint firstItem="7yk-Ar-1Z2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m7l-pk-94d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0FD-iR-Cah" secondAttribute="bottom" constant="50" id="pbC-Id-cIR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backGroundView" destination="yJu-h1-Rl7" id="YPJ-QY-YEZ"/>
+                        <outlet property="footerLabel" destination="0FD-iR-Cah" id="lfw-r1-Yi3"/>
                         <outlet property="logoImageView" destination="1yZ-oa-RVe" id="qYs-5D-bow"/>
+                        <outlet property="titleLabel" destination="7hV-64-8n5" id="83X-j3-8Ni"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,10 +109,10 @@
     <resources>
         <image name="fakeTaxi" width="225" height="225"/>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

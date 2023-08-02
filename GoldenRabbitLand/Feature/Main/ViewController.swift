@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import OSLog
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var backGroundView: MainBackGroundView!
     @IBOutlet weak var logoImageView: UIImageView!
     var logoImages = [UIImage]()
     var count = 0
+    let logger = Logger(subsystem: "subsystem", category: "category")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,8 @@ class ViewController: UIViewController {
         if let image = UIImage(named: R.image.playGround.name) {
             logoImages.append(image)
         }
+        titleLabel.traitOverrides.typesettingLanguage = Locale.Language(identifier: "th")
+        logger.debug("\(self.titleLabel)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,3 +56,8 @@ class ViewController: UIViewController {
     }
 }
 
+#Preview("Library2") {
+    let controller = ViewController()
+//    controller.displayCuratedContent = true
+    return controller
+}

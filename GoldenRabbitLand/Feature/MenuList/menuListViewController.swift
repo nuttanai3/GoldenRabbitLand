@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OSLog
 
 class menuListViewController: UIViewController {
     var interactor: menuListBusinessLogic?
@@ -15,7 +16,7 @@ class menuListViewController: UIViewController {
     // MARK: @IBOutlet
 
     // MARK: Data
-    
+    let logger = Logger(subsystem: "subsystem23", category: "category2")
     // MARK: View lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -30,7 +31,36 @@ class menuListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        var config = UIContentUnavailableConfiguration.empty()
+        config.image = UIImage(systemName: "star.fill")
+        config.imageProperties.tintColor = .white
+        config.background.backgroundColor = .gray
+        config.text = "No Favorites"
+        config.textProperties.color = .white
+        config.secondaryText =
+            "Your favorite translations will appear here."
+        config.secondaryTextProperties.color = .white
+        var retryButtonConfig = UIButton.Configuration.borderless()
+        retryButtonConfig.image = R.image.fakeTaxi()
+        config.button = retryButtonConfig
+        // Define the reload button action
+        config.buttonProperties.primaryAction = UIAction.init(handler: { _ in
+            var arr = [[String: Any]]()
+            var dict = [String: Any]()
+            dict["a"] = 0
+            dict["b"] = ""
+            arr.append(dict)
+            self.logger.info("\(arr) \(dict)")
+            self.contentUnavailableConfiguration = nil
+        })
+        contentUnavailableConfiguration = config
         doSomething()
+        logger.notice("\(config)")
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        //between viewWillAppear to viewWillLayoutSubviews
     }
 
     private func setupView() {
@@ -44,6 +74,11 @@ class menuListViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
+        var arr = [structA]()
+        var ao = structA(a: "11")
+        arr.append(ao)
+        logger.log(level: .error, "\(arr)")
+        logger.trace("\(ao)")
         dismiss(animated: true)
     }
 }
@@ -63,4 +98,19 @@ extension menuListViewController {
     private func configure() {
         menuListConfiguration.shared.configure(self)
     }
+}
+
+struct structA: CustomStringConvertible {
+    var description: String {
+        return "structA(a: \(a), b: \(b))"
+    }
+    
+    var a: String = "10"
+    var b: Int = 9
+}
+
+#Preview("Library") {
+    let controller = menuListViewController()
+//    controller.displayCuratedContent = true
+    return controller
 }

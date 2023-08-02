@@ -45,3 +45,13 @@ class MainBackGroundView: UIView {
         backGroundView.stop()
     }
 }
+
+//#Preview("Library1") {
+//    let controller = MainBackGroundView()
+////    controller.displayCuratedContent = true
+//    return controller
+//}
+#Preview("Memories") {
+    let view = MainBackGroundView()
+    return view
+}
